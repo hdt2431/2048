@@ -143,7 +143,7 @@ public class ChartsActivity extends AppCompatActivity {
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
-        mToolBarTextView.setText("排行榜");
+        mToolBarTextView.setText(R.string.start_charts);
         mToolbar.setNavigationIcon(R.drawable.btn_back);
         mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
