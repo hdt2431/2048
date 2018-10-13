@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <integer name="databases_version">3</integer>
+    <integer name="card_size">28</integer>
 </resources>

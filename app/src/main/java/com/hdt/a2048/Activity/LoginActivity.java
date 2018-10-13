@@ -41,6 +41,7 @@ public class LoginActivity extends Activity implements View.OnClickListener {
     private ServiceConnection conn = new ServiceConnection() {
         @Override
 
+
         //当service连接时
         public void onServiceConnected(ComponentName name, IBinder service) {
             musicService = ((BackGroundMusicService.AudioBinder) service).getService();

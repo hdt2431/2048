@@ -48,7 +48,7 @@ public class Card extends FrameLayout {
 
     public void setNum(int num) {
         this.num = num;
-
+        label.setTextSize(28);
         if (num <= 0) {
             label.setText("");
         } else {
@@ -97,14 +97,27 @@ public class Card extends FrameLayout {
             case 1024:
                 label.setTextColor(getResources().getColor(R.color.otherFont));
                 label.setBackgroundResource(R.color._1024Back);
+                label.setTextSize(20);
                 break;
             case 2048:
                 label.setTextColor(getResources().getColor(R.color.otherFont));
                 label.setBackgroundResource(R.color._2048Back);
+                label.setTextSize(20);
+                break;
+            case 4096:
+                label.setTextColor(getResources().getColor(R.color.otherFont));
+                label.setBackgroundResource(R.color._2048Back);
+                label.setTextSize(20);
+                break;
+            case 8192:
+                label.setTextColor(getResources().getColor(R.color.otherFont));
+                label.setBackgroundResource(R.color._2048Back);
+                label.setTextSize(20);
                 break;
             default:
                 label.setTextColor(getResources().getColor(R.color._2Font));
                 label.setBackgroundResource(R.color._2Back);
+                label.setTextSize(28);
                 break;
         }
     }
