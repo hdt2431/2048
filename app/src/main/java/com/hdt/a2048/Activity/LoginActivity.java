@@ -10,6 +10,7 @@ import android.content.ServiceConnection;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.icu.text.IDNA;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.util.Log;
@@ -81,17 +82,19 @@ public class LoginActivity extends Activity implements View.OnClickListener {
         final TitanicTextView mTvStartGame = (TitanicTextView) findViewById(R.id.startGame);
         final TitanicTextView mTvStartCharts = (TitanicTextView) findViewById(R.id.startCharts);
         final TitanicTextView mTvcontinue = (TitanicTextView) findViewById(R.id.continue_btn);
+        final TitanicTextView mTvGameInfo = (TitanicTextView) findViewById(R.id.gameInfo);
 
 
         //设置点击监听
         mTvStartCharts.setOnClickListener(this);
         mTvStartGame.setOnClickListener(this);
         mTvcontinue.setOnClickListener(this);
-
+        mTvGameInfo.setOnClickListener(this);
         //先隐藏了
         mTvStartGame.setVisibility(View.INVISIBLE);
         mTvStartCharts.setVisibility(View.INVISIBLE);
         mTvcontinue.setVisibility(View.INVISIBLE);
+        mTvGameInfo.setVisibility(View.INVISIBLE);
         //开启动画
 
         //首先创建一个显示器
@@ -122,6 +125,7 @@ public class LoginActivity extends Activity implements View.OnClickListener {
             bnp.setVisibility(View.INVISIBLE);
             mTvStartCharts.setVisibility(View.VISIBLE);
             mTvStartGame.setVisibility(View.VISIBLE);
+            mTvGameInfo.setVisibility(View.VISIBLE);
             mTvcontinue.setVisibility(View.GONE);
             MySqlHelper mySqlHelper = new MySqlHelper(friendContext, "db2048.db", null, 1);
             SQLiteDatabase db = mySqlHelper.getWritableDatabase();
@@ -154,6 +158,7 @@ public class LoginActivity extends Activity implements View.OnClickListener {
                             bnp.setVisibility(View.INVISIBLE);
                             mTvStartCharts.setVisibility(View.VISIBLE);
                             mTvStartGame.setVisibility(View.VISIBLE);
+                            mTvGameInfo.setVisibility(View.VISIBLE);
                             MySqlHelper mySqlHelper = new MySqlHelper(friendContext, "db2048.db", null, 1);
                             SQLiteDatabase db = mySqlHelper.getReadableDatabase();
                             Cursor cursor = db.query("gamestate",null,null,null,null,null,null);
@@ -219,6 +224,10 @@ public class LoginActivity extends Activity implements View.OnClickListener {
             case R.id.continue_btn:
                 next = new Intent(this, MainActivity.class);
                 next.putExtra("flag","2");
+                startActivity(next);
+                break;
+            case R.id.gameInfo:
+                next = new Intent(this, InfoActivity.class);
                 startActivity(next);
                 break;
             default:

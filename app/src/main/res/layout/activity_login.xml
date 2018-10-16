@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerInParent="true"
-        android:layout_marginBottom="100dp"
+        android:layout_marginBottom="29dp"
         android:orientation="vertical">
 
         <com.hdt.a2048.Utils.TitanicTextView
@@ -36,6 +36,18 @@
             android:background="@drawable/btn_login"
             android:gravity="center"
             android:text="@string/start_game"
+            android:textColor="@color/purple"
+            android:textSize="26sp" />
+
+        <com.hdt.a2048.Utils.TitanicTextView
+
+            android:id="@+id/gameInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="@drawable/btn_login"
+            android:gravity="center"
+            android:text="@string/game_info"
             android:textColor="@color/purple"
             android:textSize="26sp" />
 

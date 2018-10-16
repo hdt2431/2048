@@ -155,7 +155,7 @@ public class MainActivity extends AppCompatActivity implements OnMenuItemClickLi
         see.setResource(R.drawable.eyes);
 
         MenuObject about_autor = new MenuObject(getResources().getString(R.string.menu_info));
-        about_autor.setResource(R.drawable.people);
+        about_autor.setResource(R.drawable.illustration);
 
         MenuObject exit = new MenuObject(getResources().getString(R.string.menu_exit));
         exit.setResource(R.drawable.exit);
@@ -249,7 +249,7 @@ public class MainActivity extends AppCompatActivity implements OnMenuItemClickLi
 
             //退出游戏
             case 4:
-                finish();
+                SysApplication.getInstance().exit();
                 break;
             default:
                 break;
