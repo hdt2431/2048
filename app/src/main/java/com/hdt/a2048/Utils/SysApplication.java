@@ -9,6 +9,7 @@ import java.util.List;
 public class SysApplication extends Application {
     private List<Activity> mList = new ArrayList<>();
     private static SysApplication instance;
+    private Activity activity;
     private SysApplication(){}
     public static synchronized SysApplication getInstance(){
         if (null == instance){
@@ -38,5 +39,11 @@ public class SysApplication extends Application {
         super.onLowMemory();
     }
 
+    public Activity getActivity() {
+        return activity;
+    }
 
+    public void setActivity(Activity activity) {
+        this.activity = activity;
+    }
 }

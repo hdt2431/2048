@@ -118,10 +118,10 @@ public class GameView extends LinearLayout {
 
         addCards(Config.CARD_WIDTH, Config.CARD_WIDTH);
         flag = mainFragment.getFlag();
-        Log.e("aaaflag",flag);
-        if(flag.equals("1")) {
+        Log.e("aaaflag", flag);
+        if (flag.equals("1")) {
             startGame();
-        }else if(flag.equals("2")) {
+        } else if (flag.equals("2")) {
             continueGame();
         }
     }
@@ -178,7 +178,7 @@ public class GameView extends LinearLayout {
         db.delete("gamestate", "name = ?", new String[]{"state1"});
         values.put("cards", NumtoString(cards));
         values.put("user_score", 0);
-        values.put("time",0);
+        values.put("time", 0);
         values.put("name", "state1");
         db.insert("gamestate", "id", values);
 //        Cursor cursor = db.query("gamestate", null, null, null, null, null, "user_score desc");//列名称  倒排序
@@ -195,6 +195,7 @@ public class GameView extends LinearLayout {
 //        }
         db.close();
     }
+
     public void continueGame() {
 
         mainFragment.setScore(queryScore());
@@ -211,6 +212,7 @@ public class GameView extends LinearLayout {
 
 
     }
+
     public void updateCards() {
         String str = NumtoString(cards);
         int score = mainFragment.getScore();
@@ -328,7 +330,6 @@ public class GameView extends LinearLayout {
     }
 
 
-
     private int[] StringtoNum(String str) {
         String[] b = str.split("-");
         int[] a = new int[b.length];
@@ -418,6 +419,7 @@ public class GameView extends LinearLayout {
                             MainFragment.getMainFragment().addScore(
                                     cardsMap[x][y].getNum());
                             merge = true;
+                            //x--;
                         }
 
                         break;
@@ -640,19 +642,19 @@ public class GameView extends LinearLayout {
                 String name = cursor.getString(nameIndex);
                 int score = cursor.getInt(scoreIndex);
                 int id = cursor.getInt(idIndex);
-                mList.add(new Gamer(id, name, score,time2));
+                mList.add(new Gamer(id, name, score, time2));
             }
-            if(mList.size()==10){
-                Gamer gamer = mList.get(mList.size()-1);
-                if(mainFragment.getScore()>gamer.getScore()){
-                    DialogUtils.getAddChartDialog(context, mainFragment.getScore(),time);
-                }else {
+            if (mList.size() == 10) {
+                Gamer gamer = mList.get(mList.size() - 1);
+                if (mainFragment.getScore() > gamer.getScore()) {
+                    DialogUtils.getAddChartDialog(context, mainFragment.getScore(), time);
+                } else {
                     DialogUtils.endDialog(context);
                 }
-            }else if(mList.size()<10){
-                DialogUtils.getAddChartDialog(context, mainFragment.getScore(),time);
+            } else if (mList.size() < 10) {
+                DialogUtils.getAddChartDialog(context, mainFragment.getScore(), time);
             }
-           // DialogUtils.getAddChartDialog(context, MainFragment.getMainFragment().getScore(),time);
+            // DialogUtils.getAddChartDialog(context, MainFragment.getMainFragment().getScore(),time);
         }
     }
 

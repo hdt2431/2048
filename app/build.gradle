@@ -24,10 +24,10 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
-    implementation 'com.daimajia.numberprogressbar:library:1.2@aar'
     implementation 'com.yalantis:contextmenu:1.0.4'
     implementation 'com.nineoldandroids:library:2.4.0'
     implementation project(':library')
     implementation 'com.daimajia.numberprogressbar:library:1.4@aar'
+
    // implementation 'com.specyci:residemenu:1.6+'
 }

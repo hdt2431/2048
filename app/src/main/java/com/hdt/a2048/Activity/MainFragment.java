@@ -78,9 +78,7 @@ public class MainFragment extends Fragment {
     public void startGame() {
         gameView.startGame();
     }
-    public  void contiuneGame(){
-        gameView.continueGame();
-    }
+
 
     public void addScore(int s) {
         score += s;
@@ -122,6 +120,7 @@ public class MainFragment extends Fragment {
     public int getScore() {
         return score;
     }
+
     public long getCurrentSecond() {
         return currentSecond;
     }

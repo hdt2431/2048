@@ -56,6 +56,7 @@ public class MainActivity extends AppCompatActivity implements OnMenuItemClickLi
 
         setContentView(R.layout.activity_main);
         SysApplication.getInstance().addActivity(this);
+        SysApplication.getInstance().setActivity(this);
         Intent intent = getIntent();
         String data = intent.getStringExtra("flag");
 
@@ -295,5 +296,7 @@ public class MainActivity extends AppCompatActivity implements OnMenuItemClickLi
 
     }
 
-
+    public void setPause(boolean pause) {
+        isPause = pause;
+    }
 }

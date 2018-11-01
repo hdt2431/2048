@@ -1,0 +1,45 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /home/hedatong/Downloads/2048/library/AndroidManifest.xml:1:1-17:12
+INJECTED from /home/hedatong/Downloads/2048/library/AndroidManifest.xml:1:1-17:12
+INJECTED from /home/hedatong/Downloads/2048/library/AndroidManifest.xml:1:1-17:12
+INJECTED from /home/hedatong/Downloads/2048/library/AndroidManifest.xml:1:1-17:12
+INJECTED from /home/hedatong/Downloads/2048/library/AndroidManifest.xml:1:1-17:12
+INJECTED from /home/hedatong/Downloads/2048/library/AndroidManifest.xml:1:1-17:12
+INJECTED from /home/hedatong/Downloads/2048/library/AndroidManifest.xml:1:1-17:12
+	package
+		ADDED from /home/hedatong/Downloads/2048/library/AndroidManifest.xml:3:5-42
+		INJECTED from /home/hedatong/Downloads/2048/library/AndroidManifest.xml
+		INJECTED from /home/hedatong/Downloads/2048/library/AndroidManifest.xml
+	android:versionName
+		ADDED from /home/hedatong/Downloads/2048/library/AndroidManifest.xml:5:5-30
+		INJECTED from /home/hedatong/Downloads/2048/library/AndroidManifest.xml
+		INJECTED from /home/hedatong/Downloads/2048/library/AndroidManifest.xml
+	xmlns:tools
+		ADDED from /home/hedatong/Downloads/2048/library/AndroidManifest.xml:2:5-51
+	xmlns:android
+		ADDED from /home/hedatong/Downloads/2048/library/AndroidManifest.xml:1:11-69
+	android:versionCode
+		ADDED from /home/hedatong/Downloads/2048/library/AndroidManifest.xml:4:5-28
+		INJECTED from /home/hedatong/Downloads/2048/library/AndroidManifest.xml
+		INJECTED from /home/hedatong/Downloads/2048/library/AndroidManifest.xml
+application
+ADDED from /home/hedatong/Downloads/2048/library/AndroidManifest.xml:8:5-14:19
+	android:label
+		ADDED from /home/hedatong/Downloads/2048/library/AndroidManifest.xml:11:9-41
+	android:icon
+		ADDED from /home/hedatong/Downloads/2048/library/AndroidManifest.xml:10:9-45
+	android:allowBackup
+		ADDED from /home/hedatong/Downloads/2048/library/AndroidManifest.xml:9:9-35
+	android:theme
+		ADDED from /home/hedatong/Downloads/2048/library/AndroidManifest.xml:12:9-40
+	tools:replace
+		ADDED from /home/hedatong/Downloads/2048/library/AndroidManifest.xml:13:9-37
+uses-sdk
+INJECTED from /home/hedatong/Downloads/2048/library/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /home/hedatong/Downloads/2048/library/AndroidManifest.xml
+INJECTED from /home/hedatong/Downloads/2048/library/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /home/hedatong/Downloads/2048/library/AndroidManifest.xml
+		ADDED from /home/hedatong/Downloads/2048/library/AndroidManifest.xml
+		INJECTED from /home/hedatong/Downloads/2048/library/AndroidManifest.xml
